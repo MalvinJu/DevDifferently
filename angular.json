@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "src/app/share/styles/icons.sass"
             ],
             "scripts": []
           },
@@ -90,6 +91,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.sass",
               "src/styles.sass"
             ],
             "scripts": []
