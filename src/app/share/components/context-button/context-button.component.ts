@@ -29,9 +29,11 @@ export class ContextButtonComponent {
 
   displayContextMenu(event: any) {
     if (!event) return;
+
+    const leftAddition = !this.label ? 0 : this.label.length * 5;
     this.contextStyle = {
       position: 'absolute',
-      left: (event.target.offsetLeft-115) + 'px',
+      left: (event.target.offsetLeft-115+leftAddition) + 'px',
       top: (event.target.offsetTop+30) + 'px',
       'z-index': 99,
     }
