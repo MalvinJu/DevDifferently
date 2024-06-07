@@ -14,7 +14,9 @@
             Recently uploaded files
         </div>
         <div class="item-container">
-            
+            @for (file of files; track file) {
+                <app-card-file [file]="file"></app-card-file>
+            }
         </div>
     </div>
 </div>

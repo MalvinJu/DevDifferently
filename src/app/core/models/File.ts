@@ -1,8 +1,10 @@
-export interface Folder {
+export interface File {
     fileName: string,
-    icon: string,
+    author: string,
     url: string,
     size: string,
     type: string,
-    isFavorite: Boolean
+    isFavorite: Boolean,
+    duration: number,
+    durationDisplay: string
 }

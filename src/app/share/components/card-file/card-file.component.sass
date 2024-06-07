@@ -8,17 +8,35 @@
     color: var(--text-primary)
     border: 1px solid #3D3D42
 
-    &:active
+    &:hover
+         .graphic-content
+            .item-container 
+                .info-container
+                    visibility: hidden
+                    height: 0
+                .duration-container
+                    visibility: visible
+                    height: initial
+                .overflow
+                    background-color: var(--background-color)
+                    ::ng-deep.context-button
+                        opacity: 1
+
+    &:active:not(:has(.active))
         background-color: var(--background-click-color)
 
         .graphic-content
             .item-container
+                .info-container
+                    visibility: hidden
+                    height: 0
+                .duration-container
+                    visibility: visible
+                    height: initial
                 .overflow
                     border: 1px solid #3D3D42
-                    opacity: 1 !important
                     background-color: var(--background-click-color)
-
-                    .context-button
+                    ::ng-deep.context-button
                         opacity: 0.8
 
     .graphic-content
@@ -26,6 +44,9 @@
         padding: 12px
         border-bottom: 1px solid #3D3D42
         border-radius: 10px 10px 0 0
+        display: flex
+        justify-content: space-between
+        flex-direction: column
 
         .item-container 
             height: 18px
@@ -33,14 +54,26 @@
             flex-direction: row
             align-items: center
             justify-content: space-between
+            font-weight: 700
+            font-size: 10px
+
+            &:has(.active) 
+                .info-container
+                    visibility: hidden
+                    height: 0
+                .duration-container
+                    visibility: visible
+                    height: initial
+
+            .duration-container
+                visibility: hidden
+                height: 0
 
             .info-container
                 display: flex
                 flex-direction: row
                 gap: 4px
-                font-weight: 700
-                font-size: 10px
-            
+
                 .info
                     border-radius: 4px
                     align-content: center
@@ -62,13 +95,29 @@
                 justify-content: center
                 border: 1px solid transparent
 
+                &:has(.active) 
+                    border: 1px solid transparent
+                    background-color: var(--background-color)
+
+                    ::ng-deep.context-button
+                        opacity: 1
+
                 .icon
                     opacity: 0.6
                     width: 8px
 
-                    &:after
-                        content: '\2807'
+        &:hover
+            .loading-bar
+                background: rgba(255,255,255,0.4)
+                margin-left: -12px
+                width: 204px
+                margin-bottom: -12px
 
+                .progress
+                    transition: width .5s ease-in-out
+                    height: 4px
+                    background: #6611F5
+                    width: 85px
 
     .text-content     
         display: flex
