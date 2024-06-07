@@ -7,7 +7,7 @@
     padding: 16px 12px
     background-color: var(--background-color)
     color: var(--text-primary)
-    border: 1px solid #3D3D42
+    border: 1px solid var(--border-color)
 
     &:has(.active)
         background-color: var(--background-hover-color)
@@ -16,7 +16,7 @@
         background-color: var(--background-hover-color)
         
         ::ng-deep.overflow
-            border: 1px solid #3D3D42
+            border: 1px solid var(--border-color)
             opacity: 1 !important
             background-color: var(--background-color)
 
@@ -71,7 +71,7 @@
         border: 1px solid transparent
 
         &:has(.active) 
-            border: 1px solid #3D3D42
+            border: 1px solid var(--border-color)
             opacity: 1 !important
             background-color: var(--background-color)
 

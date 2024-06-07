@@ -6,7 +6,7 @@
     border-radius: 10px
     background-color: var(--background-color)
     color: var(--text-primary)
-    border: 1px solid #3D3D42
+    border: 1px solid var(--border-color)
 
     &:hover
          .graphic-content
@@ -34,7 +34,7 @@
                     visibility: visible
                     height: initial
                 .overflow
-                    border: 1px solid #3D3D42
+                    border: 1px solid var(--border-color)
                     background-color: var(--background-click-color)
                     ::ng-deep.context-button
                         opacity: 0.8
@@ -42,7 +42,7 @@
     .graphic-content
         height: 96px
         padding: 12px
-        border-bottom: 1px solid #3D3D42
+        border-bottom: 1px solid var(--border-color)
         border-radius: 10px 10px 0 0
         display: flex
         justify-content: space-between
